@@ -1,5 +1,5 @@
 {
-    "security_email": "lizzobeth73@gmail.com",
+    "security_email": "smtp@example.com",
     "security_phone": "+1234567890",
     "smtp_server": "smtp.gmail.com",
     "smtp_port": 587,
