@@ -1,0 +1,58 @@
+Run started:2026-02-16 07:09:39.990038+00:00
+
+Test results:
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'your_app_password'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.3/plugins/b105_hardcoded_password_string.html
+   Location: .\atm_detector.py:91:12
+90	            "smtp_email": "alerts@atmbank.com",
+91	            "smtp_password": "your_app_password",
+92	            "camera_source": 0,
+93	            "detection_interval": 1.0,
+94	            "enable_email": False,
+95	            "enable_sms": False,
+96	            "enable_webhook": False,
+97	            "enable_audio": True,
+98	            "sensitivity": "medium",  # low, medium, high
+99	            "save_screenshots": True,
+100	            "screenshot_folder": "alerts"
+101	        }
+102	        
+103	        if Path(config_file).exists():
+104	            with open(config_file, 'r') as f:
+105	                self.config = json.load(f)
+106	                print(f"✅ Loaded config from {config_file}")
+107	        else:
+108	            self.config = default_config
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.3/plugins/b110_try_except_pass.html
+   Location: .\atm_detector.py:335:8
+334	                winsound.Beep(freq, duration)
+335	        except:
+336	            pass
+337	    
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 409
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 2
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 1
+		High: 1
+Files skipped (0):

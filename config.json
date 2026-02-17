@@ -1,0 +1,17 @@
+{
+    "security_email": "lizzobeth73@gmail.com",
+    "security_phone": "+1234567890",
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587,
+    "smtp_email": "alerts@atmbank.com",
+    "smtp_password": "your_app_password",
+    "camera_source": 0,
+    "detection_interval": 1.0,
+    "enable_email": false,
+    "enable_sms": false,
+    "enable_webhook": false,
+    "enable_audio": true,
+    "sensitivity": "medium",
+    "save_screenshots": true,
+    "screenshot_folder": "alerts"
+}
